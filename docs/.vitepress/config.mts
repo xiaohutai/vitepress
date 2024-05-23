@@ -3,13 +3,35 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // base: '/vitepress/',
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "Awesomesauce",
+  description: "Knowledge Base",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    editLink: {
+      pattern: 'https://github.com/xiaohutai/vitepress/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
+    },
+
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
+      {
+        text: 'Dropdown',
+        items: [
+          { text: 'Item A', link: '/item-1' },
+          { text: 'Item B', link: '/item-2' },
+          { text: 'Item C', link: '/item-3' }
+        ]
+      }
     ],
 
     sidebar: [
@@ -23,7 +45,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/xiaohutai/vitepress' }
     ]
   }
 })
