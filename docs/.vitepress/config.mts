@@ -3,8 +3,13 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // base: '/vitepress/',
+  lang: 'en-US',
   title: "Awesomesauce",
   description: "Knowledge Base",
+  cleanUrls: true,
+  markdown: {
+    math: true
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
@@ -40,6 +45,13 @@ export default defineConfig({
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }
+        ]
+      },
+      {
+        text: 'Foobar',
+        items: [
+          { text: 'Foo', link: '/foobar/foo' },
+          { text: 'Bar', link: '/foobar/bar' }
         ]
       }
     ],
