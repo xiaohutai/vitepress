@@ -17,17 +17,18 @@ export const en = defineConfig({
       '/artificial-intelligence/': { base: '/artificial-intelligence/', items: sidebarArtificialIntelligence() },
       '/resources/': { base: '/resources/', items: sidebarResources() },
       '/finance/': { base: '/finance/', items: sidebarFinance() },
-      '/philosophy/': { base: '/philosophy/', items: sidebarPhilosophy() }
+      '/philosophy/': { base: '/philosophy/', items: sidebarPhilosophy() },
+      '/ontwerpwerk/': { base: '/ontwerpwerk/', items: sidebarOntwerpwerk() },
     },
 
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      pattern: 'https://github.com/xiaohutai/vitepress/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present Evan You'
+      copyright: 'Copyright © 2024 Xiao-Hu Tai'
     }
   }
 });
@@ -35,6 +36,7 @@ export const en = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: 'Home'    , link: '/' },
+    { text: 'Ontwerpwerk', link: '/ontwerpwerk', activeMatch: '/ontwerpwerk/' },
     { text: 'Accessibility', link: '/accessibility', activeMatch: '/accessibility/' },
     { text: 'User Experience', link: '/user-experience', activeMatch: '/user-experience/' },
     {
@@ -110,21 +112,25 @@ function sidebarAccessibility() : DefaultTheme.SidebarItem[] {
     { text: 'Config & API Reference', base: '/reference/', link: 'site-config' }
   ];
 }
+
 function sidebarUserExperience() : DefaultTheme.SidebarItem[] {
   return [
     //
   ];
 }
+
 function sidebarArtificialIntelligence() : DefaultTheme.SidebarItem[] {
   return [
     //
   ];
 }
+
 function sidebarResources() : DefaultTheme.SidebarItem[] {
   return [
     //
   ];
 }
+
 function sidebarFinance() : DefaultTheme.SidebarItem[] {
   return [
     //
@@ -135,6 +141,7 @@ function sidebarPhilosophy(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: 'Reference',
+      collapsed: false,
       items: [
         { text: 'Site Config', link: 'site-config' },
         { text: 'Frontmatter Config', link: 'frontmatter-config' },
@@ -143,6 +150,7 @@ function sidebarPhilosophy(): DefaultTheme.SidebarItem[] {
         {
           text: 'Default Theme',
           base: '/reference/default-theme-',
+          collapsed: false,
           items: [
             { text: 'Overview', link: 'config' },
             { text: 'Nav', link: 'nav' },
@@ -162,4 +170,10 @@ function sidebarPhilosophy(): DefaultTheme.SidebarItem[] {
       ]
     }
   ]
+}
+
+function sidebarOntwerpwerk() : DefaultTheme.SidebarItem[] {
+  return [
+    //
+  ];
 }
